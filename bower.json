@@ -1,0 +1,6 @@
+{
+  "name": "spring-boot-polymer",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  }
+}
