@@ -134,7 +134,7 @@ gulp.task('images', function() {
   return imageOptimizeTask(path.join(webapp, 'images', '**/*'), dist('images'));
 });
 
-// Copy all files at the root level (app)
+// Copy all files at the root level (src/main/webapp)
 gulp.task('copy', function() {
   var app = gulp.src([
     path.join(webapp, '*'),
