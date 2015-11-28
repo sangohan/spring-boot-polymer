@@ -36,3 +36,19 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.7'
 }
+
+/* Install NPM and bower dependencies */
+task installDeps(type: Exec) {
+    executable "sh"
+    args "-c", "npm install && bower install"
+}
+
+/* Execute gulp task and copy files from dist/ into static/ in JAR */
+task gulp(type: Exec) {
+    executable "sh"
+    args "-c", "gulp default"
+}
+jar.into('static') {
+    from('dist/')
+}
+jar.dependsOn gulp
