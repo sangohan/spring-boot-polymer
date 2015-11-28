@@ -107,3 +107,7 @@ src/main/webapp/bower_components
 
 ### NPM ###
 node_modules/
+
+### Starter Kit ###
+dist/
+.tmp/
